@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Menu</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <header>
+        <h1>Meow Café</h1>
+        <img id="header-img" src="images/neko.gif" alt="cat">
+    </header>
+
+    <nav align="center">
+        <ul>
+            <li><a href="#menu">Products</a></li>
+            <li><a href="#order">Order</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2 id="menu">Menu</h2>
+
+        <article>
+            <div class="text-content">
+                <h3>Pancakes</h3>
+                <p>Tasty yum yum pancakes drizzled with our secret catsauce (Mint Infused Honey)</p>
+            </div>
+            <img src="images/pancake.png">
+        </article>
+
+        <article>
+            <div class="text-content">
+                <h3>Cattpacino</h3>
+                <p>Warm drink that you'll love.. Just like a cat in your lap!</p>
+            </div>
+            <img src="images/catpacino.png" id="cup">
+        </article>
+
+        <article>
+            <div class="text-content">
+                <h3>Waffles</h3>
+                <p>Strawberry & Chocolate waffles to have a pawe-some day! Now available in cat shapes!</p>
+            </div>
+            <img src="images/waffle.png">
+        </article>
+
+        <br><br>
+        <h2 id="order">Place your Order</h2>
+
+        <form method="post" action="order.php">
+
+            <label>Pancakes:</label>
+            <input type="number" min="0" max="10" value="0" name="pancakes" required> <br>
+            <br>
+
+            <label>Cattpacino:</label>
+            <input type="number" min="0" max="10" value="0" name="cattpacino" required> <br>
+            <br>
+
+            <label>Waffles:</label>
+            <input type="number" min="0" max="10" value="0" name="waffles" required> <br> <br>
+
+            <fieldset>
+                <legend>Choose Your Sauce:</legend>
+                <label>
+                    <input type="checkbox" name="sauce[]" value="Honey">
+                    Honey
+                </label>
+                <label>
+                    <input type="checkbox" name="sauce[]" value="Vanilla">
+                    Vanilla
+                </label> <br>
+                <label>
+                    <input type="checkbox" name="sauce[]" value="Caramel">
+                    Caramel
+                </label>
+                <label>
+                    <input type="checkbox" name="sauce[]" value="Chocolate">
+                    Chocolate
+                </label>
+            </fieldset> <br> <br>
+
+            <fieldset>
+                <legend>Select Add-ons:</legend>
+                <label>
+                    <input type="radio" name="addons" value="Ice Cream" required>
+                    Ice Cream
+                </label>
+                <label>
+                    <input type="radio" name="addons" value="Milk" required>
+                    Milk
+                </label> <br>
+                <label>
+                    <input type="radio" name="addons" value="Pet-a-Cat" required>
+                    Pet-a-Cat
+                </label>
+            </fieldset> <br> <br>
+
+            <label for="special_requests">Special Requests:</label> <br><br>
+            <textarea id="special_requests" name="special_requests" rows="4" cols="50"></textarea>
+
+            <br> <br>
+            <input type="submit" value="Place Order">
+        </form>
+
+    </main>
+
+    <br>
+
+    <footer>
+        <p>Made with 🩷 by @themeowmews</p>
+    </footer>
+</body>
+
+</html>
